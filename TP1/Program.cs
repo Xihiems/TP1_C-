@@ -1,12 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Net.Http;
-using System.Threading.Tasks;
-using Newtonsoft.Json.Linq;
-using System.Text;
 using Newtonsoft.Json;
-using System.Linq;
 
 namespace TP1
 {
@@ -137,7 +131,7 @@ namespace TP1
 
 
                 Root data = JsonConvert.DeserializeObject<Root>(json);
-                Console.WriteLine(data);
+                Console.WriteLine("The json is converted and assign to an object");
 
             }
             
