@@ -1,0 +1,15 @@
+/Users/yannraymond58/Projects/TP1/TP1/bin/Debug/netcoreapp3.1/TP1.deps.json
+/Users/yannraymond58/Projects/TP1/TP1/bin/Debug/netcoreapp3.1/TP1.runtimeconfig.json
+/Users/yannraymond58/Projects/TP1/TP1/bin/Debug/netcoreapp3.1/TP1.runtimeconfig.dev.json
+/Users/yannraymond58/Projects/TP1/TP1/bin/Debug/netcoreapp3.1/TP1.dll
+/Users/yannraymond58/Projects/TP1/TP1/bin/Debug/netcoreapp3.1/TP1.pdb
+/Users/yannraymond58/Projects/TP1/TP1/obj/Debug/netcoreapp3.1/TP1.csproj.AssemblyReference.cache
+/Users/yannraymond58/Projects/TP1/TP1/obj/Debug/netcoreapp3.1/TP1.GeneratedMSBuildEditorConfig.editorconfig
+/Users/yannraymond58/Projects/TP1/TP1/obj/Debug/netcoreapp3.1/TP1.AssemblyInfoInputs.cache
+/Users/yannraymond58/Projects/TP1/TP1/obj/Debug/netcoreapp3.1/TP1.AssemblyInfo.cs
+/Users/yannraymond58/Projects/TP1/TP1/obj/Debug/netcoreapp3.1/TP1.csproj.CoreCompileInputs.cache
+/Users/yannraymond58/Projects/TP1/TP1/obj/Debug/netcoreapp3.1/TP1.dll
+/Users/yannraymond58/Projects/TP1/TP1/obj/Debug/netcoreapp3.1/TP1.pdb
+/Users/yannraymond58/Projects/TP1/TP1/obj/Debug/netcoreapp3.1/TP1.genruntimeconfig.cache
+/Users/yannraymond58/Projects/TP1/TP1/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll
+/Users/yannraymond58/Projects/TP1/TP1/obj/Debug/netcoreapp3.1/TP1.csproj.CopyComplete

@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "pKzmqNd3anlPWGzn+a2QoEldRwE1GVmH00p/AJ1ykxvBA7LHmN5ekkf2XFrxb01p23vgylRnwVHqD3gA9io/wA==",
+  "success": true,
+  "projectFilePath": "/Users/yannraymond58/Projects/TP1/TP1/TP1.csproj",
+  "expectedPackageFiles": [
+    "/Users/yannraymond58/.nuget/packages/newtonsoft.json/13.0.1/newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
