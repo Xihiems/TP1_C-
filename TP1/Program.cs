@@ -106,35 +106,18 @@ namespace TP1
                 Console.WriteLine("The exception is : " + e);
             }
 
-            Console.WriteLine("Exercise 4\n");
+            Console.WriteLine("Exercise 4.1 && 4.2\n");
 
             //Creates squares
 
-            Console.WriteLine("Example :\n");
 
-            Console.WriteLine("square 1 1 :");
-            rectangle(1, 1);
+            askRectangleUser();
 
-            Console.WriteLine("square 1 5 :");
-            rectangle(1, 5);
+            askTree();
 
-            Console.WriteLine("square 4 1 :");
-            rectangle(4, 1);
-            Console.WriteLine("square 4 3 :");
-            rectangle(4, 3);
-
-            Console.WriteLine("Exercise 5\n");
-
-            using (StreamReader r = new StreamReader("DOGE_AllDataPoints_3Days.json"))
-            {
-                string json = r.ReadToEnd();
+            Console.ReadKey();
 
 
-                Root data = JsonConvert.DeserializeObject<Root>(json);
-                Console.WriteLine("The json is converted and assign to an object");
-
-            }
-            
         }
 
         //all the function are below :
@@ -144,16 +127,16 @@ namespace TP1
             Console.WriteLine("Please write a number and press enter :");
             int.TryParse(Console.ReadLine(), out var result);
             return result;
-            
+
         }
 
         private static void PrimNumber(int i)
         {
-            for(var j=2;j<i; j++)
+            for (var j = 2; j < i; j++)
             {
 
                 Boolean prime = true;
-                for(var k=2;k <= Math.Sqrt(j);k++)
+                for (var k = 2; k <= Math.Sqrt(j); k++)
                 {
                     if (j % k == 0)
                     {
@@ -165,7 +148,7 @@ namespace TP1
                 {
                     Console.WriteLine(j);
                 }
-                
+
             }
 
         }
@@ -219,9 +202,9 @@ namespace TP1
             string rectangle = "";
             for (int i = 0; i < largeur; i++)
             {
-                for(int j = 0; j < longueur; j++)
+                for (int j = 0; j < longueur; j++)
                 {
-                    if (i==0 && j == 0||i==largeur-1 && j==0||i==0 && j==longueur-1||i==largeur-1 && j==longueur-1)
+                    if (i == 0 && j == 0 || i == largeur - 1 && j == 0 || i == 0 && j == longueur - 1 || i == largeur - 1 && j == longueur - 1)
                     {
                         rectangle += "o";
                     }
@@ -237,14 +220,135 @@ namespace TP1
                     {
                         rectangle += " ";
                     }
-                    
-                   
+
+
                 }
                 rectangle += "\n";
             }
             Console.WriteLine(rectangle);
         }
 
+        private static void rectangleWithStars(int largeur, int longueur)
+        {
+            string rectangle = "";
+            for (int i = 0; i < largeur; i++)
+            {
+                for (int j = 0; j < longueur; j++)
+                {
+                    var offset = j % 3;
 
+                    if (i == 0 && j == 0 || i == largeur - 1 && j == 0 || i == 0 && j == longueur - 1 || i == largeur - 1 && j == longueur - 1)
+                    {
+                        rectangle += "o";
+                    }
+                    else if (j == 0 || j == longueur - 1)
+                    {
+                        rectangle += "|";
+                    }
+                    else if (i == 0 || i == largeur - 1)
+                    {
+                        rectangle += "-";
+                    }
+                    else if (i % 3 == offset)
+                    {
+                        rectangle += "*";
+                    }
+                    else
+                    {
+                        rectangle += " ";
+                    }
+
+
+                }
+                rectangle += "\n";
+            }
+            Console.WriteLine(rectangle);
+        }
+
+        private static void askRectangleUser()
+        {
+            bool verif = true;
+            while (verif == true)
+            {
+                Console.WriteLine("Choose your square methode : square = s or squareWithStar = sws");
+                string method = Console.ReadLine();
+                Console.WriteLine("Enter the length :");
+                string length = Console.ReadLine();
+                Console.WriteLine("Enter the width :");
+                string width = Console.ReadLine();
+
+                if (method == "s")
+                {
+                    rectangle(int.Parse(width), int.Parse(length));
+                }
+                if (method == "sws")
+                {
+                    rectangleWithStars(int.Parse(width), int.Parse(length));
+                }
+                else
+                {
+                    Console.WriteLine("The name of the method is not recognized");
+                }
+
+                Console.WriteLine("Do you want to continue (yes:y/no:n)");
+                string continuevar = Console.ReadLine();
+                if (continuevar == "y")
+                {
+                    verif = true;
+                }
+
+
+                else
+                {
+                    verif = false;
+                }
+
+
+            }
+        }
+
+        private static void askTree()
+        {
+            Console.WriteLine("Choose the size of the tree :");
+            string size = Console.ReadLine();
+            Console.WriteLine("Do you want some decorations : (yes:y/no:n)");
+            string decoration = Console.ReadLine();
+            try
+            {
+                if (int.Parse(size) >= 3 && int.Parse(size) <= 20)
+                {
+                    Tree(int.Parse(size));
+                }
+                else
+                {
+                    throw new ArgumentException(message: "Parameter must be between 6 and 20");
+                }
+            }
+            catch (ArgumentException e)
+            {
+                Console.WriteLine("{0} First exception caught.", e);
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("{0} Second exception caught.", e);
+            }
+        }
+
+        private static void Tree(int n) 
+        {
+            int nbetoile = 1;
+            string tree = "";
+            for (int i = 0; i < n; i++) 
+            {
+                for (int j = 0; j < nbetoile; j++) 
+                {
+                    tree += "*";
+                    
+                }
+                nbetoile += 2;
+                tree += "\n";
+            }
+            Console.WriteLine(tree);
+        }
     }
 }
